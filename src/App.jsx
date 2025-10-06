@@ -25,7 +25,7 @@ export default function App() {
   }, [darkMode]);
 
   return (
-    <div className='pl-65 pr-65 min-h-screen bg-cover bg-center'
+    <div className='pl-100 pr-100 min-h-screen bg-cover bg-center'
     style ={{
       backgroundImage: `url(${image})`,
       backgroundPositionY: `${offset * 0.5}px`,

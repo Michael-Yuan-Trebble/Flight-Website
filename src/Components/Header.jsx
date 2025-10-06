@@ -7,7 +7,7 @@ export default function Header({darkMode}){
         {name:"Models",path:"/Models"},
     ];
     return(
-        <nav className = "flex justify-between items-center px-10 pt-10 pb-20 text-[20px]" style={{
+        <nav className = "flex justify-between items-center px-10 pb-20 text-[20px]" style={{
             backgroundColor: darkMode ? 'black' : 'white'
         }}>
             <span className="font-semibold"
