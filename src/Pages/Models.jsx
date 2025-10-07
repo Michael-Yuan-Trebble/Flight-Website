@@ -6,8 +6,10 @@ export default function Models({darkMode}){
         <div>
             <Header darkMode={darkMode}/>
             <HeaderImage/>
-            <div className='pl-10 pr-10 pt-30 min-h-screen'>
-                Models
+            <div className='flex min-h-screen pt-20 px-4 sm:px-8 md:px-16'>
+                <div className='text-[20px] font-bold'>
+                    Models
+                </div>
             </div>
         </div>
     )

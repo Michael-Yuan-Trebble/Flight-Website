@@ -7,19 +7,24 @@ export default function Header({darkMode}){
         {name:"Models",path:"/Models"},
     ];
     return(
-        <nav className = "flex justify-between items-center px-10 pb-20 text-[20px]" style={{
+        <nav className = "flex flex-wrap justify-between items-center py-4 transition-colors duration-300 pb-10  px-4 sm:px-8 md:px-16" 
+        style={{
             backgroundColor: darkMode ? 'black' : 'white'
         }}>
-            <span className="font-semibold"
+            <span className="font-semibold text-lg sm:text-xl md:text-2xl"
             style={{color: darkMode ? "white" : "black"}}>
                 Flight Simulator
             </span>
-            <div className="flex text-right space-x-4">
+            <div className="flex flex-wrap justify-end space-x-3 sm:space-x-6 mt-2 sm:mt-0">
             {pages.map((link)=> (
-                <Link key={link.path} to={link.path} className=" hover:text-blue-500 rounded-[5px]"
-                style={{    backgroundColor: darkMode ? '#03061A' : 'white',
-                            color: darkMode ? 'white' : 'black',}}>
-                    {link.name}
+                <Link 
+                key={link.path} 
+                to={link.path} 
+                className="text-[20px] font-semibold py- rounded-md hover:text-blue-500 transition-colors duration-300"
+                style={{    
+                    backgroundColor: darkMode ? '#03061A' : 'white',
+                    color: darkMode ? 'white' : 'black',}}>
+                {link.name}
                 </Link>
             ))}
             </div>
