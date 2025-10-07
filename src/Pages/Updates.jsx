@@ -15,6 +15,9 @@ export default function Updates({darkMode}){
         },
         {
             year:2024,month:12,day:10,title: 'Start of the project', description: 'When the project was first started in Unreal Engine 5'
+        },
+        {
+            year:2025, month:10,day:7,title: 'Created all sections of website', description: 'Website has all sections'
         }
     ]
 
@@ -43,9 +46,12 @@ export default function Updates({darkMode}){
                     </a>
                 </div>
 
-                <div className="w-full h-175 overflow-y-auto bg-gray-100 p-4 rounded-lg shadow-inner space-y-4">
+                <div   className={`w-full h-175 overflow-y-auto p-4 rounded-lg shadow-inner transition-colors duration-300 space-y-4 
+                    ${darkMode ? "bg-gray-800" : "bg-blue-100"}`}
+                >
                     {sortedUpdates.map((u,i) => (
                         <UpdateLog
+                            darkMode={darkMode}
                             key={i}
                             year={u.year}
                             month={u.month}

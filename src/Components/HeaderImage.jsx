@@ -1,4 +1,4 @@
-import image from '../Images/Su-27.png'
+import image from '../Images/Banner.png'
 
 export default function HeaderImage(){
     return(

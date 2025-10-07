@@ -1,0 +1,1 @@
+Current major development goals are to refine flight controls, AI, weapons, and visuals. Later additions will be adding sound and updating weather to suit the goals accordingly. As progress continue more visual improvements will be made, however this is not the main focus as of now.

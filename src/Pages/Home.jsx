@@ -3,7 +3,8 @@ import HeaderImage from '../Components/HeaderImage'
 import Image from '../Components/Image'
 import DownloadButton from '../Components/DownloadButton'
 import ReactMarkdown from 'react-markdown'
-import HomeMd from '../Text/Home.md?raw'
+import DescriptionMd from '../Text/Description.md?raw'
+import FutureAdditionsMd from '../Text/FutureAdditions.md?raw'
 import MissileGif from '../Images/Missile.gif'
 import ShootGif from '../Images/Shoot.gif'
 
@@ -30,7 +31,13 @@ export default function Home({darkMode}){
 
                     <div className='pt-10'>
                         <ReactMarkdown>
-                            {HomeMd}
+                            {DescriptionMd}
+                        </ReactMarkdown>
+                    </div>
+
+                    <div className='pt-10'>
+                        <ReactMarkdown>
+                            {FutureAdditionsMd}
                         </ReactMarkdown>
                     </div>
 

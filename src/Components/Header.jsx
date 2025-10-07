@@ -9,7 +9,7 @@ export default function Header({darkMode}){
     return(
         <nav className = "flex flex-wrap justify-between items-center py-4 transition-colors duration-300 pb-10  px-4 sm:px-8 md:px-16" 
         style={{
-            backgroundColor: darkMode ? 'black' : 'white'
+            backgroundColor: darkMode ? '#03061A' : 'white'
         }}>
             <span className="font-semibold text-lg sm:text-xl md:text-2xl"
             style={{color: darkMode ? "white" : "black"}}>

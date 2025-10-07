@@ -4,7 +4,7 @@ import Home from "./Pages/Home";
 import NoPage from "./Pages/NoPage";
 import Updates from "./Pages/Updates";
 import Models from "./Pages/Models";
-import image from "./Images/T-38.png";
+import image from "./Images/Background.png";
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -33,7 +33,7 @@ export default function App() {
       }}
     >
       <div
-        className={`w-full max-w-7xl min-h-screen text-[15px] transition-colors duration-300 font-roboto leading-relaxed tracking-normal pt-10 ${
+        className={`w-full max-w-5xl min-h-screen text-[15px] transition-colors duration-300 font-roboto leading-relaxed tracking-normal pt-10 ${
           darkMode
             ? "bg-[#03061A] text-white"
             : "bg-white text-black"
