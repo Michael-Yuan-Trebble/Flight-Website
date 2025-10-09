@@ -6,27 +6,22 @@ import UpdateLog from '../Components/UpdateLog'
 export default function Updates({darkMode}){
     const [selectedUpdate, setSelectedUpdate] = useState(null);
 
-    const updates = [
-        {
-            year:2025, month:10,day:6,title: 'Creation of Development Website', description: 'The website for centralizing progress and details was created'
-        },
-        {
-            year:2025,month:4,day:14,title: 'Initial GitHub commit', description: 'The first GitHub commit for the source code for the project'
-        },
-        {
-            year:2024,month:12,day:10,title: 'Start of the project', description: 'When the project was first started in Unreal Engine 5'
-        },
-        {
-            year:2025, month:10,day:7,title: 'Created all sections of website', description: 'Website has all sections'
-        }
-    ]
+    const files = import.meta.glob('../UpdatesMd/*.md', { eager: true, import: 'default', query: '?raw' });
 
-    const sortedUpdates = [...updates].sort((a,b) => {
-        const dateA = new Date(a.year, a.month - 1,a.day);
-        const dateB = new Date(b.year, b.month - 1, b.day);
-        return dateB - dateA;
+    const updates = Object.values(files).map((raw) => {
+        const [firstLine, ...rest] = raw.split('\n');
+        const [date, ...titleParts] = firstLine.split('|');
+        const title = titleParts.join('|').trim();
+        const description = rest.join('\n').trim();
+        const [year, month, day] = date.trim().split('-');
+        return { year, month, day, title, description };
     });
 
+    updates.sort(
+    (a, b) =>
+        new Date(b.year, b.month - 1, b.day) - new Date(a.year, a.month - 1, a.day)
+    );
+    
     return(
         <div>
             <Header darkMode={darkMode}/>
@@ -49,7 +44,7 @@ export default function Updates({darkMode}){
                 <div   className={`w-full h-175 overflow-y-auto p-4 rounded-lg shadow-inner transition-colors duration-300 space-y-4 
                     ${darkMode ? "bg-gray-800" : "bg-blue-100"}`}
                 >
-                    {sortedUpdates.map((u,i) => (
+                    {updates.map((u,i) => (
                         <UpdateLog
                             darkMode={darkMode}
                             key={i}
@@ -57,7 +52,7 @@ export default function Updates({darkMode}){
                             month={u.month}
                             day={u.day}
                             title={u.title} 
-                            onClick={() =>setSelectedUpdate(u)}
+                            onClick={() => setSelectedUpdate(u)}
                         />
                     ))}
 

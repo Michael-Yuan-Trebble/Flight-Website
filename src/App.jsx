@@ -36,10 +36,10 @@ export default function App() {
         className={`w-full max-w-5xl min-h-screen text-[15px] transition-colors duration-300 font-roboto leading-relaxed tracking-normal pt-10 ${
           darkMode
             ? "bg-[#03061A] text-white"
-            : "bg-white text-black"
+            : "bg-[#E8E8E8] text-black"
         }`}
         style={{
-          backgroundColor: darkMode ? "#03061A" : "white",
+          backgroundColor: darkMode ? "#03061A" : "#E8E8E8",
         }}
       >
         <BrowserRouter>
@@ -54,7 +54,7 @@ export default function App() {
       <div
         className="fixed bottom-4 left-4 p-2 rounded-md shadow-md transition-colors duration-300"
         style={{
-          backgroundColor: darkMode ? "black" : "white",
+          backgroundColor: darkMode ? "#03061A" : "#E8E8E8",
           color: darkMode ? "white" : "black",
         }}
       >

@@ -1,3 +1,1 @@
-A preview into a flight simulator project still in early development.
-
-This flight simulator aims to deliver fast-paced aerial combat with an emphasis on speed management, maneuverability, and intense atmospheric conditions.
+This flight simulator delivers fast-paced aerial combat with an emphasis on speed management, maneuverability, and intense atmospheric conditions. Players will engage in high-stakes dogfights, navigate through violent storms, and master the delicate balance between speed and control across a variety of aircraft. This is built for pilots who want a bit more challenge dogfights and unpredictability that comes with the weather. 

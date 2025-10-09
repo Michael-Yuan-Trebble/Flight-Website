@@ -23,10 +23,15 @@ export default function Home({darkMode}){
                     <h3 className="text-[20px] font-bold pb-10">
                         Flight Simulator Prototype
                     </h3>
+                    
                     <DownloadButton darkMode={darkMode}/>
                     
-                    <div className="pt-10">
+                    <div className="pt-10 underline">
                         Download is currently not available.    
+                    </div>
+
+                    <div className='pt-10'>
+                        A preview into a flight simulator project still in early development.
                     </div>
 
                     <div className='pt-10'>
@@ -42,8 +47,11 @@ export default function Home({darkMode}){
                     </div>
 
                     <div className='pt-10'>
-                        Updates goes to the major development updates and a github link to the repository for the source code.
-                        Models goes to current models created, although not finalized.
+                        Major update development updates are logged in the updates tab of this website. There is a GitHub link to the repository also located there.
+                    </div>
+
+                    <div className='pt-10'>
+                        All major models are displayed in the Models tab, these models are not finalized and serve as more of a "test-bench" as of now.
                     </div>
 
                     <div className='pt-10'>
