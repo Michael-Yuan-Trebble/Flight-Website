@@ -27,8 +27,9 @@ export default function Models({darkMode}){
                     Models are created in Blender
                 </div>
 
-                <div className={`w-full h-175 overflow-y-auto bg-gray-100 p-4 rounded-lg shadow-inner transition-colors duration-300 grid grid-cols-2 md:grid-cols-3 gap-4 auto-rows-[10rem]
-                ${darkMode ? "bg-gray-800" : "bg-blue-100"}`}>
+                <div className={`w-full h-175 overflow-y-auto p-4 rounded-lg shadow-inner transition-colors duration-300 grid grid-cols-2 md:grid-cols-3 gap-4 auto-rows-[10rem]
+                ${darkMode ? "bg-gray-800" : " bg-gray-300"}
+                ${darkMode ? "border-2 border-gray-50" : "border-2 border-gray-600"}`}>
                 {models.map((m, i) => (
                     <button
                     key={i}

@@ -41,8 +41,9 @@ export default function Updates({darkMode}){
                     </a>
                 </div>
 
-                <div   className={`w-full h-175 overflow-y-auto p-4 rounded-lg shadow-inner transition-colors duration-300 space-y-4 
-                    ${darkMode ? "bg-gray-800" : "bg-blue-100"}`}
+                <div   className={`w-full h-175 overflow-y-auto p-4 rounded-lg shadow-inner transition-colors duration-300 space-y-4
+                    ${darkMode ? "bg-gray-800" : " bg-gray-300"}
+                    ${darkMode ? "border-2 border-gray-50" : "border-2 border-gray-600"}`}
                 >
                     {updates.map((u,i) => (
                         <UpdateLog
