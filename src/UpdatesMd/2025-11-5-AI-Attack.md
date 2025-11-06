@@ -1,0 +1,3 @@
+2025-11-5 | AI Attack Logic Added
+
+AI now has basic attacking logic. When attacking, AI will check if it's in distance given the largest range of its weapon and then check which weapon is in the shortest range of the target. This is done to use more agile, both on and off the rail, missiles the closer the target is. The AI shouldn't be using long range Active Homing Missiles against a target that's only around 2000m away, instead it will fire its IR missiles.
