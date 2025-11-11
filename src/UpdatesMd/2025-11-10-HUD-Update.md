@@ -1,0 +1,3 @@
+2025-11-10 | HUD Update
+
+Player HUD now includes more information. There is a reticle for where the nose points and one that indicates where the aircraft is going, which then shows the angle of attack through difference. Currently the downward AOA applied by pitch is inversely displayed, which I will need to fix. I have also added a basic pitch ladder to better help the player read what angle they are at, however this will eventually be placed in only the in-cockpit view.
