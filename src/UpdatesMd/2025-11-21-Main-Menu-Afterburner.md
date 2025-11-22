@@ -1,0 +1,3 @@
+2025-11-12 | Main Menu Workflow and Afterburner
+
+Main Menu transitions to the selection menu, then onto the one level currently, with some fallbacks just in case. Lots of fixes were also made to make it more stable and handle transitions better. Updated flight logic to be a bit more dynamic so its not just "turn until you win" gameplay. Aircraft model also has afterburners, which are added dynamically through the data asset instead of manually setting each effect.
